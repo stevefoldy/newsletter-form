@@ -1,0 +1,63 @@
+.form-control {
+    font-size: 18px;
+    height: 55px;
+    border: 0;
+    font-weight: 300;
+}
+
+.custom-control-input {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 1rem;
+    height: 1.10938rem;
+    opacity: 0;
+}
+
+.custom-control-label {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.custom-control-label:before {
+    border-radius: 3px;
+}
+
+.custom-control-label::before {
+    position: absolute;
+    top: 0.10938rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    content: "";
+    background-color: #fff;
+    border: 0;
+}
+
+.custom-control-label:after {
+    position: absolute;
+    top: 0.10938rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    background: no-repeat 50% / 50% 50%;
+}
+
+.custom-control-input:checked ~ .custom-control-label:before {
+    color: #fff;
+    border-color: var(--main-color);
+    background-color: var(--main-color);
+}
+
+.custom-control-input {
+    color: white;
+}
+
+.custom-control-input:checked ~ .custom-control-label:after {
+    border-radius: 3px;
+    background: url('../img/check.svg') center center no-repeat black;
+}
